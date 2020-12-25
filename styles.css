@@ -1,0 +1,12 @@
+body {
+  background-color: grey;
+  text-align: center;
+}
+
+#rectup {
+  height: 150px;
+}
+
+#rectdown {
+  height: 150px;
+}
