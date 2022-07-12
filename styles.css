@@ -3,10 +3,20 @@ body {
   text-align: center;
 }
 
-#rectup {
+#rects {
   height: 150px;
 }
 
-#rectdown {
-  height: 150px;
+.rect {
+  
+}
+
+.buttons {
+  padding: 8px;
+  font-size: large;
+}
+
+.buttons:hover {
+  cursor: pointer;
+  background-color: gainsboro;
 }
