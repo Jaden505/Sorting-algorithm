@@ -3,17 +3,21 @@ body {
   text-align: center;
 }
 
-#rects {
-  height: 150px;
-}
-
-.rect {
-  
-}
-
 .buttons {
   padding: 8px;
   font-size: large;
+}
+
+.svg_stroke {
+  width: 10px;
+  height: 500px;
+  display: inline-block;
+}
+
+.rect_stroke {
+  fill:rgb(255,255,255);
+  stroke-width:1;
+  stroke:rgb(0,0,0);
 }
 
 .buttons:hover {

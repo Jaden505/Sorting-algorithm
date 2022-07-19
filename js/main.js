@@ -1,18 +1,10 @@
-function createStrokes(amount) {
-    for (let i=0; i<amount; i++) {
-        const svg = document. createElementNS("http://www.w3.org/2000/svg", "svg");
-        svg.setAttribute ("width", "20" );
-        svg.setAttribute ("height", "100" );
+let disp = new Display();
+let rand = new Randomize();
 
-        const rect = document. createElementNS("http://www.w3.org/2000/svg", "svg");
-        svg.setAttribute ("width", "20" );
-        svg.setAttribute ("height", "100" );
-        svg.setAttribute ("style", "fill: white;")
+disp.createStrokes(50)
 
-        svg.appendChild(rect)
+let randomize_button = document.getElementById('randomize');
 
-        document.appendChild(svg);
-    }
-}
-
-createStrokes(1)
+randomize_button.addEventListener('click', function() {
+    rand.Randomize();
+});
