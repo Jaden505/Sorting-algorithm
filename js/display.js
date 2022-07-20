@@ -1,8 +1,8 @@
 class Display {
   constructor() {
-    self.red_style = "fill:rgb(255,0,0);stroke-width:1;stroke:rgb(0,0,0)";
-    self.green_style = "fill:rgb(0,255,0);stroke-width:1;stroke:rgb(0,0,0)";
-    self.white = "fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0)";
+    self.red = "rgb(255,0,0)";
+    self.green = "rgb(0,255,0)";
+    self.white = "rgb(255,255,255)";
 
     self.rects = document.getElementsByClassName("rect_stroke")
   }
@@ -11,25 +11,25 @@ class Display {
     document.getElementById('status').innerHTML = 'Analyzing';
 
     for (let rect of rects) {
-      rect.style.fill = "rgb(255,0,0)";
+      rect.style.fill = self.red;
 
       await sleep(10);
     }
 
     for (let rect of rects) {
-      rect.style = self.white;
+      rect.style.fill = self.white;
     }
   }
 
   async Sorted() {
     for (let rect of rects) {
-      rect.style.fill = "rgb(0,255,0)";
+      rect.style.fill = self.green;
       
       await sleep(10);
     }
 
     for (let rect of rects) {
-      rect.style.fill = "white";
+      rect.style.fill = self.green;
     }
 
     document.getElementById('status').innerHTML = 'Sorted';

@@ -1,3 +1,3 @@
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+function sleep(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
