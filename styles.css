@@ -10,8 +10,9 @@ body {
 
 .svg_stroke {
   width: 10px;
-  height: 500px;
+  height: 400px;
   display: inline-block;
+  transform: scaleY(-1);
 }
 
 .rect_stroke {

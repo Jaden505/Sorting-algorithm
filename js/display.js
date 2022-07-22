@@ -19,20 +19,22 @@ class Display {
     for (let rect of rects) {
       rect.style.fill = self.white;
     }
+
+    document.getElementById('status').innerHTML = 'Sorting';
   }
 
   async Sorted() {
+    document.getElementById('status').innerHTML = 'Sorted';
+
     for (let rect of rects) {
       rect.style.fill = self.green;
-      
+
       await sleep(10);
     }
 
     for (let rect of rects) {
-      rect.style.fill = self.green;
+      rect.style.fill = self.white;
     }
-
-    document.getElementById('status').innerHTML = 'Sorted';
   }
 
   createStrokes(strokes_count) {
