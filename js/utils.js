@@ -18,10 +18,10 @@ class Utils {
   
     slider.oninput = function() {
       output.innerHTML = this.value;
-      m.utils.amount_strokes = this.value;
+      utils.amount_strokes = this.value;
   
       rects.innerHTML = '';
-      m.disp.createStrokes(this.value)
+      disp.createStrokes(this.value)
     }
   }
 }
