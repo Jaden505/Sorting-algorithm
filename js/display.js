@@ -1,23 +1,23 @@
 class Display {
   constructor() {
-    self.red = "rgb(255,0,0)";
-    self.green = "rgb(0,255,0)";
-    self.white = "rgb(255,255,255)";
+    this.red = "rgb(255,0,0)";
+    this.green = "rgb(0,255,0)";
+    this.white = "rgb(255,255,255)";
 
-    self.rects = document.getElementsByClassName("rect_stroke")
+    this.rects = document.getElementsByClassName("rect_stroke")
   }
 
   async Analyse() {
     document.getElementById('status').innerHTML = 'Analyzing';
 
-    for (let rect of rects) {
-      rect.style.fill = self.red;
+    for (let rect of this.rects) {
+      rect.style.fill = this.red;
 
-      await sleep(10);
+      await utils.sleep(10);
     }
 
-    for (let rect of rects) {
-      rect.style.fill = self.white;
+    for (let rect of this.rects) {
+      rect.style.fill = this.white;
     }
 
     document.getElementById('status').innerHTML = 'Sorting';
@@ -26,14 +26,14 @@ class Display {
   async Sorted() {
     document.getElementById('status').innerHTML = 'Sorted';
 
-    for (let rect of rects) {
-      rect.style.fill = self.green;
+    for (let rect of this.rects) {
+      rect.style.fill = this.green;
 
-      await sleep(10);
+      await utils.sleep(10);
     }
 
-    for (let rect of rects) {
-      rect.style.fill = self.white;
+    for (let rect of this.rects) {
+      rect.style.fill = this.white;
     }
   }
 

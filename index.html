@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
     <title>Sorting Algorithms</title>
   </head>
   <body>  
@@ -10,6 +10,12 @@
     <button class="buttons" id="insertionSort">Insertion sort</button>
     <button class="buttons" id="selectionSort">Selection sort</button>
     <button class="buttons" id="randomize">Randomize</button>
+
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" id="myRange">
+      <p>Amount: <span id="demo"></span></p>
+    </div>
+
     <h1 id="status">Neutral</h1>
     <br>
     <div id="rects">
@@ -18,6 +24,7 @@
     <script type="text/javascript" src="js/utils.js"></script>
     <script type="text/javascript" src="js/randomize.js"></script>
     <script type="text/javascript" src="js/display.js"></script>
+    <script type="text/javascript" src="js/Sorts/sort_controller.js"></script>
     <script type="text/javascript" src="js/Sorts/quicksort.js"></script>
     <script type="text/javascript" src="js/Sorts/insertionsort.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

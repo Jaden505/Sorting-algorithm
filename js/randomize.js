@@ -1,10 +1,9 @@
 class Randomize {
-  constructor(amount_strokes) {
-    self.rects = document.getElementsByClassName("rect_stroke");
-    self.amount_strokes = amount_strokes;
+  constructor() {
+    this.rects = document.getElementsByClassName("rect_stroke");
   }
 
-  getRandomHeights() {
+  getRandomHeights(amount_strokes) {
     // Return array of randomized heights in random order
     let heights = [] , max = (110+(5*amount_strokes));
 
@@ -13,17 +12,10 @@ class Randomize {
     return heights.sort(() => Math.random() - 0.5); 
   }
     
-  Randomize() {
-    // Randomize all strokes height
-    let random_heights = this.getRandomHeights()
-
-    Array.from(rects).forEach((rect, ind) => {
+  Randomize(random_heights) {
+    Array.from(this.rects).forEach((rect, ind) => {
       rect.style.height = random_heights[ind] + "px";
     });
-
-    // for (let [rect, ind] of rects.entries()) {
-    //   rect.height = random_heights[ind] + "px";
-    // }
 
     document.getElementById('status').innerHTML = 'Randomized'
   }
