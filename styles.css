@@ -1,0 +1,27 @@
+body {
+  background-color: grey;
+  text-align: center;
+}
+
+.buttons {
+  padding: 8px;
+  font-size: large;
+}
+
+.svg_stroke {
+  width: 10px;
+  height: 400px;
+  display: inline-block;
+  transform: scaleY(-1);
+}
+
+.rect_stroke {
+  fill:rgb(255,255,255);
+  stroke-width:1;
+  stroke:rgb(0,0,0);
+}
+
+.buttons:hover {
+  cursor: pointer;
+  background-color: gainsboro;
+}
