@@ -19,23 +19,20 @@ class SelectionSort extends SortController {
               if (i !== minPos) {
                 [arr[i], arr[minPos]] = [arr[minPos], arr[i]];
 
-                await utils.sleep(30);
+                await utils.sleep(main.sort_speed);
                 this.displaySorting(arr[minPos], arr[i]);
               }
             }
             return arr;
           };
           
-          console.log(await selectionSort(heights));
+          return await selectionSort(heights);
     }
 
     displaySorting(key_height, min_key_height) {
-        console.log(key_height, min_key_height)
-
         let key = Array.from(this.rects).find(rect => parseInt(rect.style.height, 10) == key_height);
         let min_key = Array.from(this.rects).find(rect => parseInt(rect.style.height, 10) == min_key_height);
 
-        // this.parent_node.insertBefore(min_key.parentNode, key.parentNode);
         key.style.height = min_key_height;
         min_key.style.height = key_height;
     }

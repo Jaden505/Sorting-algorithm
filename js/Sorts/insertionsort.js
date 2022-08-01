@@ -21,7 +21,7 @@ class InsertionSort extends SortController {
     }
   
     async displaySorting(key, left_key) { 
-        await utils.sleep(30);
+        await utils.sleep(main.sort_speed);
 
         let left_key_elem = Array.from(this.rects).find(rect => parseInt(rect.style.height, 10) == left_key);
         let key_elem = Array.from(this.rects).find(rect => parseInt(rect.style.height, 10) == key);

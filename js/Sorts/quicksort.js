@@ -27,7 +27,7 @@ class QuickSort extends SortController {
         this.displaySorting(pivot, heights[i], 'right')
       }
 
-      await utils.sleep(30);
+      await utils.sleep(main.sort_speed);
     }
 
     return Array(await this.Sort(left)).concat(pivot, await this.Sort(right));

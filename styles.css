@@ -1,16 +1,16 @@
 body {
-  background-color: grey;
+  background-color: #1a1919;
   text-align: center;
 }
 
 .buttons {
-  padding: 8px;
-  font-size: large;
+  padding: 5px;
+  width: 80px;
 }
 
 .svg_stroke {
   width: 10px;
-  height: 400px;
+  height: 600px;
   display: inline-block;
   transform: scaleY(-1);
 }
@@ -24,4 +24,18 @@ body {
 .buttons:hover {
   cursor: pointer;
   background-color: gainsboro;
+}
+
+#userInputs {
+  position: absolute;
+  right: 0px;
+  width: 200px;
+  top: 0px;
+  height: 100%;
+  background-color: darkgrey;
+}
+
+#rects {
+  position: absolute;
+  bottom: 3px;
 }

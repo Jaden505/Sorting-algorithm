@@ -2,21 +2,39 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="styles.css"/>
     <title>Sorting Algorithms</title>
   </head>
   <body>  
-    <button class="buttons" id="quickSort">Quick sort</button>
-    <button class="buttons" id="insertionSort">Insertion sort</button>
-    <button class="buttons" id="selectionSort">Selection sort</button>
-    <button class="buttons" id="randomize">Randomize</button>
+    <div id="userInputs">
+      <br><br>
+      <button class="buttons" id="run">Run</button>
+      <button class="buttons" id="reset">Reset</button>
+      <br><br>
+      <button class="buttons" id="randomize">Randomize</button>
 
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" id="myRange">
-      <p>Amount: <span id="demo"></span></p>
+      <br><br>
+
+      <div class="slidecontainer">
+        <p>Size: <span id="arrSize"></span></p>
+        <input type="range" min="10" max="400" value="200" id="amountRange">
+      </div>
+
+      <div class="slidecontainer">
+        <p>Speed: <span id="sortSpeed"></span></p>
+        <input type="range" min="1" max="100" value="50" id="speedRange">
+      </div>
+
+      <br>
+
+      <select name="sortings" id="sortings">
+        <option class="buttons" id="quickSort">Quick Sort</option>
+        <option class="buttons" id="insertionSort">Insertion Sort</option>
+        <option class="buttons" id="selectionSort">Selection Sort</option>
+        <option class="buttons" id="mergeSort">Merge Sort</option>
+      </select>
     </div>
 
-    <h1 id="status">Neutral</h1>
     <br>
     <div id="rects">
     </div>
@@ -28,6 +46,7 @@
     <script type="text/javascript" src="js/Sorts/quicksort.js"></script>
     <script type="text/javascript" src="js/Sorts/insertionsort.js"></script>
     <script type="text/javascript" src="js/Sorts/selectionsort.js"></script>
+    <script type="text/javascript" src="js/Sorts/mergesort.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

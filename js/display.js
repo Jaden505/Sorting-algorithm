@@ -8,28 +8,22 @@ class Display {
   }
 
   async Analyse() {
-    document.getElementById('status').innerHTML = 'Analyzing';
-
     for (let rect of this.rects) {
       rect.style.fill = this.red;
 
-      await utils.sleep(10);
+      await utils.sleep(main.sort_speed/8);
     }
 
     for (let rect of this.rects) {
       rect.style.fill = this.white;
     }
-
-    document.getElementById('status').innerHTML = 'Sorting';
   }
 
   async Sorted() {
-    document.getElementById('status').innerHTML = 'Sorted';
-
     for (let rect of this.rects) {
       rect.style.fill = this.green;
 
-      await utils.sleep(10);
+      await utils.sleep(main.sort_speed/8);
     }
 
     for (let rect of this.rects) {
@@ -42,8 +36,12 @@ class Display {
                   <rect width="10" height="110" class="rect_stroke"/>
                 </svg>`
 
+    let rects = document.getElementById('rects');
+    
+    rects.innerHTML = '';
+
     for (let i = 0; i<strokes_count; i++) {
-      document.getElementById('rects').insertAdjacentHTML('afterbegin', rect)
+      rects.insertAdjacentHTML('afterbegin', rect)
     }
   }
 

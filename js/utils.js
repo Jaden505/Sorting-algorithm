@@ -1,34 +1,48 @@
 class Utils {
   constructor() {
-    this.amount_strokes = 50;
-
-    this.rangeSlider();
+    this.rangeSliderAmount();
+    this.rangeSliderSpeed();
   }
 
   sleep(time) {
     return new Promise(resolve => setTimeout(resolve, time));
   }
 
-  rangeSlider() {
-    let slider = document.getElementById("myRange");
-    let output = document.getElementById("demo");
-    let rects = document.getElementById('rects');
+  fitRectsWidth(amount) {
+      let rects = document.getElementsByClassName('rect_stroke');
+      let fit_width = (window.innerWidth*0.7798) / amount;
+
+      Array.from(rects).forEach(rect => {
+        rect.parentNode.style.width = fit_width + 'px';
+        rect.style.width = fit_width + 'px'; 
+      });
+  }
+
+  rangeSliderAmount() {
+    let slider = document.getElementById("amountRange");
+    let output = document.getElementById("arrSize");
   
     output.innerHTML = slider.value;
   
     slider.oninput = function() {
       output.innerHTML = this.value;
-      utils.amount_strokes = this.value;
+      main.amount_strokes = this.value;
   
       // Recreate the rects
-      rects.innerHTML = '';
       disp.createStrokes(this.value)
+      utils.fitRectsWidth(this.value);
+    }
+  }
 
-      // Update svg heights so it fits the screen
-      let svgs = document.getElementsByClassName('svg_stroke');
-      Array.from(svgs).forEach(svg => {
-        svg.style.height = 110 + (this.value*5);        
-      });
+  rangeSliderSpeed() {
+    let slider = document.getElementById("speedRange");
+    let output = document.getElementById("sortSpeed");
+  
+    output.innerHTML = slider.value;
+  
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+      main.sort_speed = 101-this.value;
     }
   }
 }

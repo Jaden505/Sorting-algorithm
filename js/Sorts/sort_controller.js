@@ -2,6 +2,8 @@ class SortController {
     constructor() {
         this.rects = document.getElementsByClassName("rect_stroke");
         this.parent_node = document.getElementById('rects');
+        
+        this.speed_slider = document.getElementById('speedRange').value;
     }
 
     getHeights() {
