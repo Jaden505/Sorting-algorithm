@@ -32,17 +32,15 @@ class Display {
   }
 
   createStrokes(strokes_count) {
+    let rects = document.getElementById('rects');
+    rects.innerHTML = '';
+
     let rect = `<svg class="svg_stroke">
                   <rect width="10" height="110" class="rect_stroke"/>
                 </svg>`
-
-    let rects = document.getElementById('rects');
-    
-    rects.innerHTML = '';
 
     for (let i = 0; i<strokes_count; i++) {
       rects.insertAdjacentHTML('afterbegin', rect)
     }
   }
-
 }

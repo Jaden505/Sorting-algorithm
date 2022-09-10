@@ -46,7 +46,7 @@ class Main {
                     await ss.Sort(heights);
                     break;
                 case 'Merge Sort':
-                    await ms.Sort(heights)
+                    await ms.Sort(heights);
                     break;
             }
 
